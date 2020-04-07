@@ -1,9 +1,11 @@
-from django.urls import path
-from django.http import HttpResponse
+"""Platzigram URLS module."""
 
-def hello_world(reques):
-    return HttpResponse('Hello, world!')
+from django.urls import path
+from platzigram import views
+
+
 
 urlpatterns = [
-    path('hello-world/', hello_world)
+    path('hello-world/', views.hello_world),
+    path('hi/', views.hi)
 ]
